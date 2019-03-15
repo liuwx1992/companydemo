@@ -46,21 +46,11 @@ public class TestBusinessController {
         jsonObject3.put("loa_bank","中国银行");
         jsonObject3.put("loa_type","个人住房公积金贷款");
 
-        jsonObject4.put("loa_time","2019");
-        jsonObject4.put("loa_bank","中国银行");
-        jsonObject4.put("loa_type","个人住房贷款");
-
-        jsonObject5.put("loa_time","2019");
-        jsonObject5.put("loa_bank","建设银行");
-        jsonObject5.put("loa_type","个人商用房贷款");
-
         list.add(jsonObject1);
         list.add(jsonObject2);
         list.add(jsonObject3);
         list.add(jsonObject3);
         list.add(jsonObject3);
-        list.add(jsonObject4);
-        list.add(jsonObject5);
 
         JSONArray loans = new JSONArray(list);
 
