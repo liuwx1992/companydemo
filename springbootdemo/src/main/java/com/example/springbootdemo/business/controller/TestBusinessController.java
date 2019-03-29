@@ -2,6 +2,7 @@ package com.example.springbootdemo.business.controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.junit.Test;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,8 +32,6 @@ public class TestBusinessController {
         JSONObject jsonObject1 = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
         JSONObject jsonObject3 = new JSONObject();
-        JSONObject jsonObject4 = new JSONObject();
-        JSONObject jsonObject5 = new JSONObject();
 
         jsonObject1.put("loa_time","2019");
         jsonObject1.put("loa_bank","中国银行");
@@ -121,5 +120,7 @@ public class TestBusinessController {
         JSONArray ret = new JSONArray(list);
         return ret;
     }
+
+
 
 }
