@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @Description:
+ * @Description:定时任务
  * @Author: liuweixin
  * @Date: 2019/3/28
  * @Time: 19:44
@@ -25,7 +25,7 @@ public class ScheduledTasks {
     }
 
     //每1分钟执行一次
-    @Scheduled(cron = "0 */1 *  * * * ")
+    //@Scheduled(cron = "0 */1 *  * * * ")
     public void reportCurrentByCron(){
         System.out.println ("Scheduling Tasks Examples By Cron: The time is now " + dateFormat ().format (new Date ()));
     }

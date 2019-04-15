@@ -2,7 +2,6 @@ package com.example.springbootdemo.business.controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import org.junit.Test;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Description:
+ * @Description:业务测试
  * @Author: liuweixin
  * @Date: 2019/3/7
  * @Time: 13:52
@@ -121,6 +120,28 @@ public class TestBusinessController {
         return ret;
     }
 
+    @RequestMapping("/testCheckJson")
+    public String testCheckJson(){
+        String s = "{{'hello':'world'},{'hi':'ss'}}";
+        //String s = "'hello','world'";
+        String b = checkJsonFormat(s);
+        s = b;
+        System.out.println(s);
+        return b+"";
+    }
+
+    /**
+     * 检验rpcResult格式正确性，如果格式。如果不是json格式，则赋值为{}
+     *
+     * */
+    private String checkJsonFormat(String rpcResult) {
+        try {
+            JSONObject.parseObject(rpcResult);
+        }catch (Exception e){
+            rpcResult = "{}";
+        }
+        return rpcResult;
+    }
 
 
 }
